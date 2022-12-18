@@ -60,7 +60,7 @@ Change the discord channel ID  in the config file with this path
 ```
 Change the message text if you want
 
-```
+```python
 await ticket_channel.send(
                 f"{payload.member.mention} Thank you for creating a ticket! Use **'-close'** to close your ticket.")
 
@@ -71,21 +71,21 @@ Commands:
 ```
 Add a reaction to open a ticket
 
-write "-close'" to close the ticket
+Send "-close'" to close the ticket
 
-general bot commands trigger: "£"
+General bot commands trigger: "£"
 
 ```
 If you need to change the bot trigger edit:
 
-```
+```python
 bot = commands.Bot(command_prefix="£")
 bot.ticket_configs = {}
 
 ```
 If you need to use a custom emoji for reactions:
 
-```
+```python
 if payload.member.id != bot.user.id and str(payload.emoji) == u"\U0001F3AB":
 .
 .
